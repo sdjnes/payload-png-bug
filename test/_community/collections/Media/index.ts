@@ -4,7 +4,10 @@ export const mediaSlug = 'media'
 
 export const MediaCollection: CollectionConfig = {
   slug: mediaSlug,
-  upload: true,
+  upload: {
+    mimeTypes: ['image/png', 'image/webp', 'image/jpeg'],
+    imageSizes: [],
+  },
   access: {
     read: () => true,
     create: () => true,
